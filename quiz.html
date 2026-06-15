@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm Bài Trắc Nghiệm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bài Trắc Nghiệm</h1>
+            <button class="btn-home" onclick="goHome()">← Về Trang Chủ</button>
+        </header>
+        
+        <main>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2 id="quiz-title">Bộ Đề 1</h2>
+                    <div class="question-counter">
+                        <span id="current-question">1</span> / <span id="total-questions">10</span>
+                    </div>
+                </div>
+                
+                <div class="question-section">
+                    <h3 id="question-text">🔍 Đang tải dữ liệu câu hỏi...</h3>
+                    
+                    <div class="answers" id="answers-container">
+                        <!-- Answers will be inserted here -->
+                    </div>
+                    
+                    <button class="btn-submit" id="submit-btn" onclick="submitAnswer()" disabled>Trả Lời</button>
+                    
+                    <div class="explanation" id="explanation-section" style="display: none;">
+                        <h4>Giải Thích:</h4>
+                        <div id="explanation-content"></div>
+                    </div>
+                </div>
+                
+                <div class="navigation">
+                    <button class="btn-nav" id="prev-btn" onclick="previousQuestion()" disabled>← Câu Trước</button>
+                    <button class="btn-nav" id="next-btn" onclick="nextQuestion()" disabled>Câu Tiếp →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Auto-load questions system -->
+    <script src="auto-load-questions.js"></script>
+    
+    <!-- Main quiz logic -->
+    <script src="quiz.js"></script>
+    
+    <!-- Initialize quiz after questions are loaded -->
+    <script>
+        document.addEventListener('questionsLoaded', function(e) {
+            console.log('✅ Questions loaded, initializing quiz...');
+            initQuiz();
+        });
+        
+        // Start auto-loading
+        autoLoadAllQuestions();
+    </script>
+</body>
+</html>

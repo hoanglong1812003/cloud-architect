@@ -1,0 +1,22 @@
+﻿// Question 10 - Set 3
+window.questionSet3 = window.questionSet3 || {};
+window.questionSet3[10] = {
+    question: "An innovative Business Process Outsourcing (BPO) startup is planning to launch a scalable and cost-effective call center system using AWS. The system should be able to receive inbound calls from thousands of customers and generate user contact flows. Callers must have the capability to perform basic tasks such as changing their password or checking their balance without them having to speak to a call center agent. It should also have advanced deep learning functionalities such as automatic speech recognition (ASR) to achieve highly engaging user experiences and lifelike conversational interactions. A feature that allows the solution to query other business applications and send relevant data back to callers must also be implemented.\n\nWhich of the following is the MOST suitable solution that the Solutions Architect should implement?",
+    answers: [
+        "Set up a cloud-based contact center using the Amazon Connect service. Create a conversational chatbot using Amazon Comprehend with automatic speech recognition and natural language understanding to recognize the intent of the caller then integrate it with Amazon Connect. Connect the solution to various business applications and other internal systems using AWS Lambda functions.",
+        "Set up a cloud-based contact center using the Amazon Connect service. Create a conversational chatbot using Amazon Lex with automatic speech recognition and natural language understanding to recognize the intent of the caller then integrate it with Amazon Connect. Connect the solution to various business applications and other internal systems using AWS Lambda functions.",
+        "Set up a cloud-based contact center using the AWS Ground Station service. Create a conversational chatbot using Amazon Alexa for Business with automatic speech recognition and natural language understanding to recognize the intent of the caller then integrate it with AWS Ground Station. Connect the solution to various business applications and other internal systems using AWS Lambda functions.",
+        "Set up a cloud-based contact center using the AWS Elemental MediaConnect service. Create a conversational chatbot using Amazon Polly with automatic speech recognition and natural language understanding to recognize the intent of the caller then integrate it with AWS Elemental MediaConnect. Connect the solution to various business applications and other internal systems using AWS Lambda functions."
+    ],
+    correctAnswer: 1,
+    explanation: {
+        correct: "Amazon Connect provides a seamless omnichannel experience through a single unified contact center for voice and chat. Amazon Lex is a service for building conversational interfaces into any application using voice and text. Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition (ASR) for converting speech to text and natural language understanding (NLU) to recognize the intent of the text.\n\nBy using an Amazon Lex chatbot in your Amazon Connect call center, callers can perform tasks such as changing a password, requesting a balance on an account, or scheduling an appointment without needing to speak to an agent. Amazon Lex uses AWS Lambda functions to query your business applications, provide information back to callers, and make updates as requested.",
+        incorrectReasons: [
+            "Amazon Comprehend is used to derive and understand valuable insights from text within documents. It doesn't have automatic speech recognition (ASR) for converting speech to text nor natural language understanding (NLU). You have to use Amazon Lex for this scenario.",
+            null,
+            "AWS Ground Station is a fully managed service that lets you control satellite communications, process data, and scale your operations. This service is not suitable as a cloud-based contact center. Moreover, Alexa for Business simply empowers companies to use Alexa devices as their intelligent assistant. You should use Amazon Lex to create a conversational chatbot.",
+            "AWS Elemental MediaConnect is just a high-quality transport service for live video. You have to use Amazon Connect instead to set up your cloud-based contact center. And although Amazon Polly is a machine learning service, it just turns text into lifelike speech. A more suitable service to use here is Amazon Lex."
+        ]
+    }
+};
+
