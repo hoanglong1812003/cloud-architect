@@ -1,0 +1,20 @@
+﻿// Question 10 - Set 9
+window.questionSet9[10] = {
+    question: "A company develops cloud-native applications and uses AWS CloudFormation templates for deploying applications in AWS. The application artifacts and templates are stored in an Amazon S3 bucket with versioning enabled. The developers use Amazon EC2 instances that have integrated development (IDE) to download, modify, and re-upload the artifacts on the S3 bucket. The unit testing is done locally on the EC2 instances. The company wants to improve the existing deployment process with a CI/CD pipeline to help the developers be more productive. The following requirements need to be satisfied: Utilize GitHub as the code repository for application and CloudFormation templates; Have automated testing and security scanning for the generated artifacts; Receive a notification when unit testing fails; Ability to turn on/off application features and dynamically customize the deployment as part of CI/CD; The Lead Developer must approve changes before deploying applications to production. Which of the following options should the solutions architect implement to meet the company’s requirements?",
+    answers: [
+        "Use AWS CodeArtifact to store generated artifacts. AWS scans the artifacts for common vulnerabilities and allows custom actions to run the unit tests. Create an Amazon CloudWatch rule that will send Amazon SNS alerts when unit testing fails. Use different Docker images for choosing different application features. Add a manual approval stage on the pipeline for the Lead Developer’s approval prior to production deployment.",
+        "Write an AWS Lambda function to run unit tests and security scans on the generated artifacts. Add another Lambda trigger on the next pipeline stage to notify the developers if the unit testing fails. Create AWS Amplify plugins to allow turning on/off of application features. Add an AWS SES action on the pipeline to send an approval message to the Lead Developer prior to production deployment.",
+        "Create an AWS CodeBuild job to run tests and security scans on the generated artifacts. Create an Amazon EventBridge rule that will send Amazon SNS alerts when unit testing fails. Create AWS Cloud Development Kit (AWS CDK) constructs with a manifest file to turn on/off features of the AWS CDK app. Add a manual approval stage on the pipeline for the Lead Developer’s approval prior to production deployment.",
+        "Create a Jenkins job to run tests and security scans on the generated artifacts. Create an Amazon EventBridge rule that will send Amazon SES alerts when unit testing fails. Use AWS CloudFormation with nested stacks to allow turning on/off of application features. Add an AWS Lambda function to the pipeline to allow approval from the Lead Developer prior to production deployment."
+    ],
+    correctAnswer: 2,
+    explanation: {
+        correct: "AWS CodeBuild is the ideal service for automated testing and security scanning within a CI/CD pipeline. EventBridge and SNS can provide notifications when tests fail. AWS CDK supports feature toggles and deployment customization through configuration manifests. CodePipeline's manual approval action allows the Lead Developer to review and approve changes before production deployment, satisfying all stated requirements with minimal operational overhead.",
+        incorrectReasons: [
+            "AWS CodeArtifact is an artifact repository service and does not run custom build, testing, or security scanning workflows. AWS CodeBuild is the appropriate service for these tasks.",
+            "Using AWS Lambda for unit testing and security scanning is not ideal because builds can exceed Lambda execution limits. AWS Amplify plugins are also not the recommended solution for application feature toggling in this scenario.",
+            "Although Jenkins could perform testing, it introduces additional operational overhead compared to the fully managed AWS CodeBuild service. Using Lambda for approval workflows is unnecessary because CodePipeline already provides a built-in manual approval action."
+        ]
+    }
+};
+

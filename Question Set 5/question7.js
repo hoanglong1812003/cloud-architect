@@ -1,21 +1,19 @@
 ﻿// Question 7 - Set 5
-window.questionSet5 = window.questionSet5 || {};
 window.questionSet5[7] = {
-    question: "Sample question 7 for Question Set 5 - Replace this with your actual question?",
+    question: "A company is using multiple AWS services to host its application. It wants to ensure the environment is optimized by adhering to AWS best practices. Which of the following services is capable of inspecting an AWS environment and making recommendations to lower expenditures, improve system performance and reliability, and close security gaps?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "Amazon Inspector",
+        "AWS Cost Explorer",
+        "AWS Budgets",
+        "AWS Trusted Advisor"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 3,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "AWS Trusted Advisor is an online tool that analyzes your AWS environment and provides recommendations based on AWS best practices. It helps optimize costs, improve performance, increase fault tolerance, strengthen security, and monitor service limits. Trusted Advisor organizes its recommendations into five categories: Cost Optimization, Security, Fault Tolerance, Performance, and Service Limits.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            "Amazon Inspector is an automated security assessment service that identifies vulnerabilities and security issues in workloads. It does not provide broad recommendations for cost optimization, performance improvements, and service limits.",
+            "AWS Cost Explorer is used to visualize, understand, and analyze AWS costs and usage patterns. It does not perform best-practice assessments across your AWS environment.",
+            "AWS Budgets helps track spending and usage against defined budget thresholds. Although it can generate alerts, it does not inspect resources and provide optimization recommendations."
         ]
     }
 };

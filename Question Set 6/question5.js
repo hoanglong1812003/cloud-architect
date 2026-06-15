@@ -1,21 +1,19 @@
 ﻿// Question 5 - Set 6
-window.questionSet6 = window.questionSet6 || {};
 window.questionSet6[5] = {
-    question: "Sample question 5 for Question Set 6 - Replace this with your actual question?",
+    question: "Which of the following services combine 5G networks with AWS compute and storage services for the benefit of high-performance mobile applications?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "AWS Amplify",
+        "AWS CloudShell",
+        "AWS Wavelength",
+        "AWS Control Tower"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 2,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "AWS Wavelength combines the ultra-low latency and high bandwidth of 5G networks with AWS compute and storage services. AWS deploys Wavelength Zones within telecommunications providers' data centers, allowing application traffic to reach AWS resources without leaving the mobile carrier's network. This enables the development of mobile applications that require single-digit millisecond latency.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            "AWS Amplify is a development platform used to build and deploy web and mobile applications, but it does not integrate AWS infrastructure directly into 5G networks.",
+            "AWS CloudShell is a browser-based command-line environment for managing AWS resources and has no relation to 5G networking or low-latency mobile applications.",
+            "AWS Control Tower is used to set up and govern multi-account AWS environments according to best practices. It is not related to 5G connectivity or edge computing."
         ]
     }
 };

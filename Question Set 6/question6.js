@@ -1,21 +1,20 @@
 ﻿// Question 6 - Set 6
-window.questionSet6 = window.questionSet6 || {};
 window.questionSet6[6] = {
-    question: "Sample question 6 for Question Set 6 - Replace this with your actual question?",
+    question: "A solutions architect is tasked with designing a scalable infrastructure solution for a business that runs uses Amazon Elastic Kubernetes Service (Amazon EKS) to execute container applications. Since the company’s workload varies throughout the day, they want to make sure that its underlying infrastructure automatically scales in and out in response to demand. Which of the following would meet the requirements with the LEAST amount of operational overhead?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "Integrate an edge-optimized API endpoint in Amazon API Gateway with Amazon EKS to manage and expose APIs for the containerized applications running on EKS.",
+        "Use a combination of Kubernetes Metrics and Kubernetes Cluster Autoscaler to manage the number of nodes.",
+        "Use Amazon EC2 Auto Scaling Groups with custom scaling policies to manage the scaling of EKS worker nodes.",
+        "Set up CloudWatch alarms for CPU utilization or request count to monitor the relevant metrics of the container applications running on Amazon EKS."
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 1,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "Amazon EKS supports Kubernetes-native autoscaling capabilities. By combining Kubernetes Metrics Server, Horizontal Pod Autoscaler (HPA), and Cluster Autoscaler, the cluster can automatically scale Pods and worker nodes based on workload demand. This provides the most automated and operationally efficient solution for scaling containerized applications running on EKS.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            "API Gateway can expose APIs for applications running on EKS, but it does not provide automatic scaling of Kubernetes Pods or worker nodes in response to workload demand.",
+            null,
+            "EC2 Auto Scaling Groups can scale EKS worker nodes, but managing custom scaling policies introduces additional configuration and operational overhead compared to using Kubernetes Cluster Autoscaler.",
+            "CloudWatch alarms can monitor cluster metrics, but monitoring alone does not automatically scale Kubernetes Pods or nodes. Additional automation would still be required."
         ]
     }
 };

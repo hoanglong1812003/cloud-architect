@@ -1,21 +1,19 @@
 ﻿// Question 4 - Set 5
-window.questionSet5 = window.questionSet5 || {};
 window.questionSet5[4] = {
-    question: "Sample question 4 for Question Set 5 - Replace this with your actual question?",
+    question: "Which of the following allows you to set coverage targets and receive alerts when your utilization drops below the threshold you define?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "AWS Cost Explorer",
+        "AWS Trusted Advisor",
+        "AWS Budgets",
+        "Amazon CloudWatch Billing Alarm"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 2,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "AWS Budgets allows you to create custom budgets and receive alerts when actual or forecasted costs exceed thresholds. It also supports reservation utilization and coverage budgets, enabling you to define coverage targets and receive notifications when utilization falls below your specified threshold.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            "AWS Cost Explorer is used to visualize and analyze AWS costs and usage over time, but it does not provide configurable utilization or coverage threshold alerts.",
+            "AWS Trusted Advisor provides recommendations for cost optimization, security, performance, fault tolerance, and service limits, but it does not allow you to define reservation coverage targets and alerts.",
+            "CloudWatch Billing Alarms can monitor estimated AWS charges but do not provide reservation utilization or coverage target monitoring capabilities."
         ]
     }
 };

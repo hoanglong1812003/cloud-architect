@@ -1,21 +1,20 @@
 ﻿// Question 3 - Set 6
-window.questionSet6 = window.questionSet6 || {};
 window.questionSet6[3] = {
-    question: "Sample question 3 for Question Set 6 - Replace this with your actual question?",
+    question: "Which AWS storage service offers faster disk read and write performance and provides temporary block-level storage for your instance?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "Instance Store",
+        "EBS Provisioned IOPS SSD",
+        "EFS",
+        "EBS Throughput Optimized HDD"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 0,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "Instance Store provides temporary block-level storage that is physically attached to the host server running the EC2 instance. Because the storage is local to the host, it offers very fast disk read and write performance. It is ideal for temporary data such as caches, buffers, scratch data, and other frequently changing information. However, the data is lost when the instance stops, terminates, or fails.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            null,
+            "EBS Provisioned IOPS SSD is persistent block storage that delivers high IOPS performance, but it is network-attached rather than physically attached to the host, making it slower than Instance Store.",
+            "Amazon EFS is a managed network file system that provides shared storage for multiple instances. It is persistent storage and does not provide the local high-speed performance of Instance Store.",
+            "EBS Throughput Optimized HDD is persistent magnetic storage optimized for throughput-intensive workloads, but it is network-attached and not as fast as local Instance Store storage."
         ]
     }
 };

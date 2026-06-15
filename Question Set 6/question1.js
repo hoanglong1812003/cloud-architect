@@ -1,21 +1,21 @@
 ﻿// Question 1 - Set 6
 window.questionSet6 = window.questionSet6 || {};
 window.questionSet6[1] = {
-    question: "Sample question 1 for Question Set 6 - Replace this with your actual question?",
+    question: "Which AWS well-architected pillar stresses the importance of selecting the most appropriate and right number of resource types for your requirements?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "Cost optimization",
+        "Reliability",
+        "Performance Efficiency",
+        "Operational Excellence"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 0,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "The AWS Well-Architected Framework consists of six pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability. The Cost Optimization pillar focuses on avoiding unnecessary costs by understanding and controlling spending, selecting the most appropriate resource types, analyzing usage patterns, and scaling resources efficiently to meet business needs without overspending.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            null,
+            "The Reliability pillar focuses on ensuring workloads can recover quickly from failures, meet customer demand, and operate correctly through fault tolerance and recovery mechanisms.",
+            "The Performance Efficiency pillar focuses on using computing resources efficiently, selecting the right resource sizes and architectures, and continuously monitoring performance as requirements evolve.",
+            "The Operational Excellence pillar focuses on running and monitoring systems effectively, improving operational procedures, and continuously delivering business value."
         ]
     }
 };

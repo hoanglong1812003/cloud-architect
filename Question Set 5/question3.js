@@ -1,21 +1,19 @@
 ﻿// Question 3 - Set 5
-window.questionSet5 = window.questionSet5 || {};
 window.questionSet5[3] = {
-    question: "Sample question 3 for Question Set 5 - Replace this with your actual question?",
+    question: "Which of the following channels shares a collection of offerings to help you achieve specific business outcomes related to enterprise cloud adoption through paid engagements in several specialty practice areas?",
     answers: [
-        "Answer A - Replace this",
-        "Answer B - Replace this",
-        "Answer C - Replace this (CORRECT)",
-        "Answer D - Replace this"
+        "AWS Technical Account Manager",
+        "AWS Enterprise Support",
+        "AWS Professional Services",
+        "Concierge Support"
     ],
-    correctAnswer: 2,  // Index 0-3 (0=A, 1=B, 2=C, 3=D)
+    correctAnswer: 2,
     explanation: {
-        correct: "This is the explanation for why answer C is correct. Replace this with your actual explanation.",
+        correct: "AWS Professional Services provides a collection of paid consulting offerings designed to help organizations achieve specific cloud adoption outcomes. These offerings include proven methodologies, best practices, and guidance based on AWS experience helping enterprises migrate to and optimize their cloud environments. AWS Professional Services also leverages the AWS Cloud Adoption Framework (CAF) to accelerate cloud transformation initiatives.",
         incorrectReasons: [
-            "Reason why A is incorrect. Replace this with your actual reason.",
-            "Reason why B is incorrect. Replace this with your actual reason.",
-            null,  // C is correct, so set to null
-            "Reason why D is incorrect. Replace this with your actual reason."
+            "A Technical Account Manager (TAM) serves as a designated technical advisor for Enterprise Support customers but does not provide the specialized cloud adoption engagements described in the scenario.",
+            "AWS Enterprise Support provides technical support, architectural guidance, and operational assistance, but the specialized cloud adoption engagements are delivered through AWS Professional Services.",
+            "Concierge Support assists with billing and account-related matters for enterprise customers and is not focused on cloud adoption consulting services."
         ]
     }
 };
